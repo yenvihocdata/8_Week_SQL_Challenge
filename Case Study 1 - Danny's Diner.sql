@@ -70,15 +70,12 @@ GROUP BY customer_id
   
 -- What was the first item from the menu purchased by each customer?
 -- First way
-  
 SELECT distinct customer_id,
 FIRST_VALUE(product_name) over ( partition by customer_id ORDER BY order_date) as first_item 
 FROM sales 
 LEFT JOIN menu 
 on sales.product_id = menu.product_id 
-  
 -- Second way 
-  
 WITH CTE AS ( 
 SELECT customer_id, order_date, 
 product_name ,
@@ -89,11 +86,9 @@ LEFT JOIN menu
 on sales.product_id = menu.product_id) 
 SELECT customer_id, product_name 
 FROM CTE 
-WHERE rnk=1 and rn=1 
-  
+WHERE rnk=1 and rn=1  
 -- What is the most purchased item on the menu and how many times was it purchased by all customers?
--- cách 1
-  
+-- first way   
 with TB1 as ( 
 SELECT sales.product_id,
 product_name ,
@@ -112,7 +107,7 @@ SELECT distinct
 customer_id, product_name, count , total_count 
 from TB2
 where total_count=8
---cách 2 
+--second way 
 WITH COUNT_TABLE AS(
 SELECT 
 sales.product_id,
