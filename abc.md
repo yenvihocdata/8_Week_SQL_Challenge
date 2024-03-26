@@ -1,6 +1,0 @@
-# Nguyễn Thái Tân 
-
-
-```python
-
-```
