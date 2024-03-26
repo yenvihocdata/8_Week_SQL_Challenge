@@ -51,7 +51,7 @@ Group by customer_id
 |     B       |     74       |
 |     C       |     36       |
 
-
+***
 
 ### 2. How many days has each customer visited the restaurant?
 
