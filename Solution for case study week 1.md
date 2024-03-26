@@ -1,7 +1,7 @@
 # 🍜 Case Study #1: Danny's Diner
 
 
-<img src="https://8weeksqlchallenge.com/images/case-study-designs/1.png" alt="Mo ta anh" width="700" height="400">
+<img src="https://8weeksqlchallenge.com/images/case-study-designs/1.png" alt="Mo ta anh" width="700" height="800">
 
 
 # Introduction
