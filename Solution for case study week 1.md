@@ -33,7 +33,7 @@ You can inspect the entity relationship diagram and example data below.
 
 # Question and Solution
 
-**1. What is the total amount each customer spent at the restaurant?**
+### 1. What is the total amount each customer spent at the restaurant?
 
 ```sql
 SELECT customer_id, SUM(price) as total_spent 
@@ -41,9 +41,10 @@ FROM sales
 LEFT JOIN menu 
 on sales.product_id = menu.product_id 
 Group by customer_id
+```
 
 
-***Result***
+**Result**
 
 | customer_id | total_spent |
 |:------------|:------------|
@@ -51,9 +52,9 @@ Group by customer_id
 |     B       |     74       |
 |     C       |     36       |
 
-***
 
-**2. How many days has each customer visited the restaurant?**
+
+### 2. How many days has each customer visited the restaurant?
 
 ```sql
 SELECT 
@@ -63,6 +64,7 @@ FROM
     sales
 GROUP BY 
     customer_id;
+```
 
 
 **Result**
@@ -83,6 +85,7 @@ SELECT DISTINCT customer_id,
     FROM sales 
     LEFT JOIN menu 
     ON sales.product_id = menu.product_id 
+```
 
 
 **Method 2: Use window function RANK() and ROW_NUMBER() to solve the question**
@@ -99,6 +102,7 @@ WITH CTE AS (
     ON sales.product_id = menu.product_id
 ) 
 SELECT customer_id, product_name 
+```
 
 
 **Result**
@@ -125,6 +129,7 @@ WITH COUNT_TABLE AS (
 SELECT DISTINCT product_name, count_total
 FROM COUNT_TABLE
 WHERE count_total = (SELECT MAX(count_total) FROM COUNT_TABLE)
+```
 
 
 **Result**
@@ -166,7 +171,7 @@ FROM
     volume2 
 WHERE 
     rank = 1 
-
+```
 
 **Result**
 
@@ -215,7 +220,7 @@ FROM
     table1
 WHERE 
     rnk = 1 AND rn = 1;
-
+```
 
 **Result**
 
@@ -259,7 +264,7 @@ FROM
     table1
 WHERE 
     rnk = 1 AND rn = 1;
-
+```
 
 **Result**
 
@@ -290,7 +295,7 @@ SELECT
     SUM(price) AS total_price 
 FROM ITEM 
 GROUP BY customer_id 
-
+```
 
 **Result**
 
@@ -317,7 +322,7 @@ SELECT
     SUM(actual_price)*10 AS Score
 FROM PRICE 
 GROUP BY customer_id 
-
+```
 
 **Result**
 
@@ -350,7 +355,7 @@ WHERE
     AND (sales.customer_id ='A' OR sales.customer_id='B') 
 GROUP BY 
     sales.customer_id
-
+```
 
 
 **Result**
@@ -365,3 +370,4 @@ GROUP BY
 ```python
 
 ```
+
