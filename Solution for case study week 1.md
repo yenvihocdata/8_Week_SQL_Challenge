@@ -33,7 +33,7 @@ You can inspect the entity relationship diagram and example data below.
 
 # Question and Solution
 
-### 1. What is the total amount each customer spent at the restaurant?
+**1. What is the total amount each customer spent at the restaurant?**
 
 ```sql
 SELECT customer_id, SUM(price) as total_spent 
@@ -43,7 +43,7 @@ on sales.product_id = menu.product_id
 Group by customer_id
 
 
-**Result**
+***Result***
 
 | customer_id | total_spent |
 |:------------|:------------|
@@ -53,7 +53,7 @@ Group by customer_id
 
 ***
 
-### 2. How many days has each customer visited the restaurant?
+**2. How many days has each customer visited the restaurant?**
 
 ```sql
 SELECT 
