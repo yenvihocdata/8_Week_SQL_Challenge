@@ -1,7 +1,7 @@
 # Case Study #3 - Foodie-Fi
 
 
-<img src="https://8weeksqlchallenge.com/images/case-study-designs/3.png" alt="Mo ta anh" width="700" height="800">
+<img src="https://8weeksqlchallenge.com/images/case-study-designs/3.png" alt="Mo ta anh" width="700" height="700">
 
 # Introduction
 
